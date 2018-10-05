@@ -1,5 +1,6 @@
 import os
 
+
 def test(q):
     print(q)
     os.system('python stream_psi.py'+" " + str(q))
@@ -8,7 +9,7 @@ def test(q):
     r = result.readline()
     s = expected.readline()
     while r:
-        if r!= s:
+        if r != s:
             print(r)
             print(s)
             return False
@@ -16,6 +17,7 @@ def test(q):
         s = expected.readline()
     return True
 
+
 if __name__ == "__main__":
-    for i in range(2000):
+    for i in range(1):
         print(test(i))
